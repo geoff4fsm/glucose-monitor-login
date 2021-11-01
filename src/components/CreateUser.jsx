@@ -36,7 +36,7 @@ import UserService from '../services/UserService';
             UserService.getUserById(this.state.id).then( res => {
 
                 let user = res.data;
-console.log(user)
+                    // console.log(user)
                 this.setState({
 
                     fname: user.fname,
@@ -62,7 +62,7 @@ console.log(user)
                    
         };
 
-        console.log('user => ' + JSON.stringify(user));
+        // console.log('user => ' + JSON.stringify(user));
 
         if(this.state.id === 'add') {
 
@@ -103,7 +103,7 @@ console.log(user)
     }
 
     getHeader = () => {
-        if(this.state.id === "_add") {
+        if(this.state.id === "add") {
             return <h3 className = "text-center">Add User</h3>
         } else {
             return <h3 className = "text-center">Update User</h3>
@@ -112,7 +112,7 @@ console.log(user)
 
     render() {
         return (
-            <div>
+            <div id = 'createuser'>
                 <div className = "container">
 
                     <div className = "row">
